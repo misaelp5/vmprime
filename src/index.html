@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VM Prime Distribution - Starter</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div id="vmStickyHeader" class="vm-sticky-header">
+      <div class="vm-topbar">
+        <p>Premium pet food, delivery included in Orlando & Kissimmee</p>
+        <a href="#vmFooter">Contact</a>
+      </div>
+
+      <nav class="vm-main-nav" aria-label="Main navigation">
+        <ul class="vm-main-nav-list">
+          <li class="vm-main-nav-item"><a href="#vmFeatured">Premium Food</a></li>
+          <li class="vm-main-nav-item"><a href="#vmSnacks">Snacks &amp; Treats</a></li>
+          <li class="vm-main-nav-item"><a href="#vmSupplements">Supplements &amp; Health</a></li>
+          <li class="vm-main-nav-item"><a href="#vmAccessories">Accessories &amp; Technology</a></li>
+          <li class="vm-main-nav-item"><a href="#vmBeds">Beds &amp; Comfort</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <main class="vm-shell">
+      <header class="vm-hero">
+        <div class="vm-hero-content">
+          <p class="vm-kicker">VM Prime Distribution</p>
+          <h1>Premium Pet Food for Dogs &amp; Cats - Delivery Included in Orlando &amp; Kissimmee</h1>
+          <p class="vm-sub">Shop premium pet essentials with delivery included in your final price, plus fast checkout through WhatsApp.</p>
+        </div>
+        <div class="vm-hero-card">
+          <p class="vm-chip">🔥 Top vendidos</p>
+          <ul class="vm-top-list">
+            <li><a class="vm-top-item" href="#vmFeatured">
+              <span class="vm-top-stars">★★★★★</span>
+              <span class="vm-top-name">Dr. Marty Nature's Blend Essential</span>
+              <span class="vm-top-price">$44.99</span>
+            </a></li>
+            <li><a class="vm-top-item" href="#vmSnacks">
+              <span class="vm-top-stars">★★★★★</span>
+              <span class="vm-top-name">Greenies Dental Treats</span>
+              <span class="vm-top-price">$19.99</span>
+            </a></li>
+            <li><a class="vm-top-item" href="#vmSupplements">
+              <span class="vm-top-stars">★★★★★</span>
+              <span class="vm-top-name">Zesty Paws Hip &amp; Joint Chews</span>
+              <span class="vm-top-price">$29.99</span>
+            </a></li>
+            <li><a class="vm-top-item" href="#vmAccessories">
+              <span class="vm-top-stars">★★★★★</span>
+              <span class="vm-top-name">Furbo Dog Camera Treat Dispenser</span>
+              <span class="vm-top-price">$119.99</span>
+            </a></li>
+            <li><a class="vm-top-item" href="#vmBeds">
+              <span class="vm-top-stars">★★★★★</span>
+              <span class="vm-top-name">PetFusion Ultimate Lounge Bed</span>
+              <span class="vm-top-price">$79.99</span>
+            </a></li>
+          </ul>
+        </div>
+      </header>
+
+      <section class="vm-categories" aria-label="Main categories">
+        <article class="vm-category">
+          <h3>Premium Food</h3>
+          <p>High-quality complete recipes for everyday nutrition.</p>
+        </article>
+        <article class="vm-category">
+          <h3>Snacks &amp; Treats</h3>
+          <p>Functional rewards for training and dental care.</p>
+        </article>
+        <article class="vm-category">
+          <h3>Supplements &amp; Health</h3>
+          <p>Support for joints, digestion, and overall wellness.</p>
+        </article>
+        <article class="vm-category">
+          <h3>Accessories &amp; Technology</h3>
+          <p>Automation, monitoring, and care tools.</p>
+        </article>
+        <article class="vm-category">
+          <h3>Beds &amp; Comfort</h3>
+          <p>Orthopedic and cozy options for daily rest.</p>
+        </article>
+      </section>
+
+      <section id="vmFeatured" class="vm-section">
+        <div class="vm-section-head">
+          <h2>PREMIUM FOOD</h2>
+          <p>Top picks with delivery included in final price.</p>
+        </div>
+        <section id="vmFeaturedProducts" class="vm-grid" aria-label="Featured products"></section>
+      </section>
+
+      <section id="vmSnacks" class="vm-section">
+        <div class="vm-section-head">
+          <h2>SNACKS &amp; TREATS</h2>
+          <p>Functional rewards for training and dental care.</p>
+        </div>
+        <section id="vmSnacksGrid" class="vm-grid" aria-label="Snacks and treats"></section>
+      </section>
+
+      <section id="vmSupplements" class="vm-section">
+        <div class="vm-section-head">
+          <h2>SUPPLEMENTS &amp; HEALTH</h2>
+          <p>Support for joints, digestion, and overall wellness.</p>
+        </div>
+        <section id="vmSupplementsGrid" class="vm-grid" aria-label="Supplements"></section>
+      </section>
+
+      <section id="vmAccessories" class="vm-section">
+        <div class="vm-section-head">
+          <h2>ACCESSORIES &amp; TECHNOLOGY</h2>
+          <p>Automation, monitoring, grooming, and care tools.</p>
+        </div>
+        <section id="vmAccessoriesGrid" class="vm-grid" aria-label="Accessories and technology"></section>
+      </section>
+
+      <section id="vmBeds" class="vm-section">
+        <div class="vm-section-head">
+          <h2>BEDS &amp; COMFORT</h2>
+          <p>Orthopedic and cozy options for daily rest.</p>
+        </div>
+        <section id="vmBedsGrid" class="vm-grid" aria-label="Beds and comfort"></section>
+      </section>
+
+      <aside class="vm-cart">
+        <div class="vm-cart-head">
+          <h2>Your cart</h2>
+          <button id="vmClearBtn" type="button">Clear</button>
+        </div>
+        <div id="vmCartItems" class="vm-cart-items">Your cart is empty.</div>
+        <div class="vm-total">
+          <span>Total</span>
+          <strong id="vmTotal">$0.00</strong>
+        </div>
+        <button id="vmWhatsBtn" class="vm-wa-btn" type="button">Send via WhatsApp</button>
+      </aside>
+    </main>
+
+    <footer id="vmFooter" class="vm-footer">
+      <div>
+        <h4>Information</h4>
+        <button class="vm-footer-btn" data-modal="vmModalAbout">About us</button>
+        <button class="vm-footer-btn" data-modal="vmModalDelivery">Local delivery</button>
+        <button class="vm-footer-btn" data-modal="vmModalContact">Contact</button>
+      </div>
+      <div>
+        <h4>Categories</h4>
+        <a href="#vmFeatured">Premium Food</a>
+        <a href="#vmSnacks">Snacks &amp; Treats</a>
+        <a href="#vmSupplements">Supplements &amp; Health</a>
+        <a href="#vmAccessories">Accessories &amp; Technology</a>
+        <a href="#vmBeds">Beds &amp; Comfort</a>
+      </div>
+      <div>
+        <h4>Info</h4>
+        <p>626 N Alafaya Trail, Suite 206, Orlando, Florida 32828</p>
+        <p>sales@vmprimedistribution.com</p>
+        <p>+1 (321) 318-1726</p>
+      </div>
+    </footer>
+
+    <!-- Modal: Product details -->
+    <div id="vmModalProduct" class="vm-modal" role="dialog" aria-modal="true" aria-labelledby="vmModalProductName" hidden>
+      <div class="vm-modal-backdrop"></div>
+      <div class="vm-modal-drawer">
+        <button class="vm-modal-close" aria-label="Close">&times;</button>
+        <img id="vmModalProductImage" class="vm-product-modal-image" src="" alt="" />
+        <div class="vm-product-modal-meta">
+          <p id="vmModalProductCategory" class="vm-product-modal-category"></p>
+          <h2 id="vmModalProductName"></h2>
+          <p id="vmModalProductDescription" class="vm-product-modal-description"></p>
+          <p id="vmModalProductPrice" class="vm-product-modal-price"></p>
+        </div>
+        <button id="vmModalAddBtn" class="vm-btn" type="button" data-product-id="">Add to cart</button>
+      </div>
+    </div>
+
+    <!-- Modal: About us -->
+    <div id="vmModalAbout" class="vm-modal" role="dialog" aria-modal="true" aria-labelledby="vmModalAboutTitle" hidden>
+      <div class="vm-modal-backdrop"></div>
+      <div class="vm-modal-drawer">
+        <button class="vm-modal-close" aria-label="Close">&times;</button>
+        <h2 id="vmModalAboutTitle">About VM Prime Distribution</h2>
+        <p>VM Prime Distribution is a family-owned pet supply distributor based in Orlando, Florida. We specialize in premium, freeze-dried, and raw pet food from the most trusted brands in the industry.</p>
+        <p>Our mission is simple: give every pet owner in Central Florida access to the highest-quality nutrition and care products, with same-day local delivery and personalized service via WhatsApp.</p>
+        <p>With over 25 brands in our catalog and a 4.9-star customer rating, we are proud to be the go-to source for pet parents who demand the best for their animals.</p>
+      </div>
+    </div>
+
+    <!-- Modal: Local delivery -->
+    <div id="vmModalDelivery" class="vm-modal" role="dialog" aria-modal="true" aria-labelledby="vmModalDeliveryTitle" hidden>
+      <div class="vm-modal-backdrop"></div>
+      <div class="vm-modal-drawer">
+        <button class="vm-modal-close" aria-label="Close">&times;</button>
+        <h2 id="vmModalDeliveryTitle">Local Delivery</h2>
+        <ul class="vm-modal-list">
+          <li>📍 <strong>Delivery area:</strong> Orlando &amp; Kissimmee, FL</li>
+          <li>⚡ <strong>Same-day delivery</strong> on orders placed before 3 PM</li>
+          <li>📦 <strong>Free delivery</strong> on orders over $60</li>
+          <li>💳 <strong>Payment:</strong> Cash on delivery or Zelle</li>
+          <li>💬 <strong>Order via WhatsApp</strong> — we confirm your order in minutes</li>
+        </ul>
+        <a class="vm-cta" href="https://wa.me/13213181726" target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+    </div>
+
+    <!-- Modal: Contact -->
+    <div id="vmModalContact" class="vm-modal" role="dialog" aria-modal="true" aria-labelledby="vmModalContactTitle" hidden>
+      <div class="vm-modal-backdrop"></div>
+      <div class="vm-modal-drawer">
+        <button class="vm-modal-close" aria-label="Close">&times;</button>
+        <h2 id="vmModalContactTitle">Contact Us</h2>
+        <ul class="vm-modal-list">
+          <li>📍 626 N Alafaya Trail, Suite 206<br>Orlando, Florida 32828</li>
+          <li>📧 <a href="mailto:sales@vmprimedistribution.com">sales@vmprimedistribution.com</a></li>
+          <li>📞 <a href="tel:+13213181726">+1 (321) 318-1726</a></li>
+          <li>💬 <a href="https://wa.me/13213181726" target="_blank" rel="noopener">WhatsApp us</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
