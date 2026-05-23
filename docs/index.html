@@ -14,7 +14,10 @@
       </div>
 
       <nav class="vm-main-nav" aria-label="Main navigation">
-        <ul class="vm-main-nav-list">
+        <button id="vmNavToggleBtn" class="vm-nav-toggle" type="button" aria-expanded="false" aria-controls="vmMainNavList">
+          Categories
+        </button>
+        <ul id="vmMainNavList" class="vm-main-nav-list">
           <li class="vm-main-nav-item"><a href="#vmFeatured">Premium Food</a></li>
           <li class="vm-main-nav-item"><a href="#vmSnacks">Snacks &amp; Treats</a></li>
           <li class="vm-main-nav-item"><a href="#vmSupplements">Supplements &amp; Health</a></li>
@@ -139,6 +142,12 @@
         <button id="vmWhatsBtn" class="vm-wa-btn" type="button">Send via WhatsApp</button>
       </aside>
     </main>
+
+    <button id="vmFloatingCartBtn" class="vm-floating-cart" type="button" aria-label="Go to cart">
+      <span class="vm-floating-cart-icon" aria-hidden="true">🛒</span>
+      <span>Cart</span>
+      <span id="vmFloatingCartCount" class="vm-floating-cart-count">0</span>
+    </button>
 
     <footer id="vmFooter" class="vm-footer">
       <div>

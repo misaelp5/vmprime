@@ -67,6 +67,23 @@ const vmProductModalDescriptions = {
 
 const vmCartStorageKey = "vmprime.cart";
 const vmCart = [];
+const vmFloatingCartBtn = document.getElementById("vmFloatingCartBtn");
+const vmFloatingCartCount = document.getElementById("vmFloatingCartCount");
+const vmMainNav = document.querySelector(".vm-main-nav");
+const vmMainNavToggle = document.getElementById("vmNavToggleBtn");
+
+function vmCloseMobileNav() {
+  if (!vmMainNav || !vmMainNavToggle) return;
+  vmMainNav.classList.remove("is-open");
+  vmMainNavToggle.setAttribute("aria-expanded", "false");
+  vmSyncStickyOffset();
+}
+
+function vmUpdateFloatingCart() {
+  if (!vmFloatingCartCount) return;
+  const totalItems = vmCart.reduce((sum, item) => sum + item.qty, 0);
+  vmFloatingCartCount.textContent = String(totalItems);
+}
 
 function vmMoney(value) {
   return new Intl.NumberFormat("en-US", {
@@ -186,6 +203,7 @@ function vmRenderCart() {
   if (!vmCart.length) {
     cartNode.textContent = "Your cart is empty.";
     totalNode.textContent = vmMoney(0);
+    vmUpdateFloatingCart();
     return;
   }
 
@@ -212,6 +230,7 @@ function vmRenderCart() {
     .join("");
 
   totalNode.textContent = vmMoney(total);
+  vmUpdateFloatingCart();
 }
 
 function vmClearCart() {
@@ -252,6 +271,13 @@ function vmSyncStickyOffset() {
 
 document.getElementById("vmClearBtn").addEventListener("click", vmClearCart);
 document.getElementById("vmWhatsBtn").addEventListener("click", vmSendWhatsApp);
+if (vmFloatingCartBtn) {
+  vmFloatingCartBtn.addEventListener("click", () => {
+    const cartPanel = document.querySelector(".vm-cart");
+    if (!cartPanel) return;
+    cartPanel.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+}
 document.getElementById("vmCartItems").addEventListener("click", (event) => {
   const button = event.target.closest("button[data-action]");
   if (!button) return;
@@ -272,6 +298,28 @@ vmSyncStickyOffset();
 
 window.addEventListener("resize", vmSyncStickyOffset);
 window.addEventListener("load", vmSyncStickyOffset);
+
+if (vmMainNav && vmMainNavToggle) {
+  vmMainNavToggle.addEventListener("click", () => {
+    const isOpen = vmMainNav.classList.toggle("is-open");
+    vmMainNavToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    vmSyncStickyOffset();
+  });
+
+  vmMainNav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      if (!window.matchMedia("(max-width: 740px)").matches) return;
+      vmCloseMobileNav();
+    });
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!window.matchMedia("(max-width: 740px)").matches) return;
+    if (!vmMainNav.classList.contains("is-open")) return;
+    if (vmMainNav.contains(event.target)) return;
+    vmCloseMobileNav();
+  });
+}
 
 // Modal drawers
 function vmOpenModal(id) {
