@@ -1,0 +1,6 @@
+[build]
+  command = "rm -rf docs && mkdir -p docs && cp -R src/. docs/"
+  publish = "docs"
+
+[build.environment]
+  NODE_VERSION = "20"
